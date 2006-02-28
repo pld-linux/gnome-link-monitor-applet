@@ -17,7 +17,7 @@ BuildRequires:	automake
 BuildRequires:	libgnomeui-devel >= 2.4.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-Requires(post): GConf2 >= 2.4.0
+Requires(post):	GConf2 >= 2.4.0
 Requires(post):	scrollkeeper
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -44,7 +44,7 @@ i opó¼nienia oraz zgodno¶æ z HIG 2.0.
 %configure \
 	--disable-schemas-install \
 	--enable-maintainer-mode
-	
+
 %{__make}
 
 %install
