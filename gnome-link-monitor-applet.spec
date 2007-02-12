@@ -3,7 +3,7 @@
 #
 %define		rname link-monitor-applet
 Summary:	GNOME notification area link monitor
-Summary(pl):	Monitor ³±cza dla obszaru powiadomieñ GNOME
+Summary(pl.UTF-8):   Monitor Å‚Ä…cza dla obszaru powiadomieÅ„ GNOME
 Name:		gnome-link-monitor-applet
 Version:	1.1
 Release:	1
@@ -27,11 +27,11 @@ time to one or more hosts in a bar graph. Features include full ICMP
 and ICMPv6 support, configurable scale and delays, and HIG 2.0
 compliance.
 
-%description -l pl
-Link Monitor Applet to aplet panelu GNOME wy¶wietlaj±cy czas podró¿y
-do jednego lub wiêkszej liczby hostów w postaci wykresu s³upkowego.
-Mo¿liwo¶ci obejmuj± pe³n± obs³ugê ICMP i ICMPv6, konfigurowaln± skalê
-i opó¼nienia oraz zgodno¶æ z HIG 2.0.
+%description -l pl.UTF-8
+Link Monitor Applet to aplet panelu GNOME wyÅ›wietlajÄ…cy czas podrÃ³Å¼y
+do jednego lub wiÄ™kszej liczby hostÃ³w w postaci wykresu sÅ‚upkowego.
+MoÅ¼liwoÅ›ci obejmujÄ… peÅ‚nÄ… obsÅ‚ugÄ™ ICMP i ICMPv6, konfigurowalnÄ… skalÄ™
+i opÃ³Åºnienia oraz zgodnoÅ›Ä‡ z HIG 2.0.
 
 %prep
 %setup -q -n %{rname}-%{version}
