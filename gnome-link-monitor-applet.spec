@@ -3,7 +3,7 @@
 #
 %define		rname link-monitor-applet
 Summary:	GNOME notification area link monitor
-Summary(pl.UTF-8):   Monitor łącza dla obszaru powiadomień GNOME
+Summary(pl.UTF-8):	Monitor łącza dla obszaru powiadomień GNOME
 Name:		gnome-link-monitor-applet
 Version:	1.1
 Release:	1
