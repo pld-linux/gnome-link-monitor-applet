@@ -5,15 +5,16 @@
 Summary:	GNOME notification area link monitor
 Summary(pl.UTF-8):	Monitor łącza dla obszaru powiadomień GNOME
 Name:		gnome-link-monitor-applet
-Version:	1.1
+Version:	2.2
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://savannah.nongnu.org/download/link-monitor/%{rname}-%{version}.tar.gz
-# Source0-md5:	ea9e59ad0991eebea85af0432bbbb93d
+Source0:	http://savannah.nongnu.org/download/link-monitor/%{rname}-%{version}.tar.bz2
+# Source0-md5:	7b1be343d8809b244f7b26565caf23fb
 URL:		http://www.nongnu.org/link-monitor-applet/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	intltool
 BuildRequires:	libgnomeui-devel >= 2.4.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
@@ -37,6 +38,7 @@ i opóźnienia oraz zgodność z HIG 2.0.
 %setup -q -n %{rname}-%{version}
 
 %build
+%{__intltoolize}
 %{__aclocal} -I m4
 %{__autoheader}
 %{__automake}
@@ -49,13 +51,10 @@ i opóźnienia oraz zgodność z HIG 2.0.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_datadir}/gnome/help
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
-
-mv $RPM_BUILD_ROOT%{_datadir}/help/* $RPM_BUILD_ROOT%{_datadir}/gnome/help
 
 %find_lang %{rname} --all-name --with-gnome
 
